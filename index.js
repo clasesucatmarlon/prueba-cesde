@@ -19,6 +19,8 @@ app.use(cors());
 mongoose.connect('mongodb+srv://admin:admin12345@cesde.vjnvlqq.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true, useUnifiedTopology: true
 })
+    .then ( () => console.log('Conectado a la BD'))
+    .catch( (error) => console.log('Error de conexión: ', error))
 
 
 // Endpoint para insertar nueva cita
